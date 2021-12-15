@@ -1,38 +1,52 @@
 import './style.css';
-import * as THREE from 'three';
+import {
+  Scene,
+  Color,
+  WebGLRenderer,
+  PerspectiveCamera,
+  Group,
+  BoxGeometry,
+  MeshPhongMaterial,
+  Mesh,
+  WireframeGeometry,
+  LineSegments,
+  PointLight,
+  GridHelper,
+  PointLightHelper
+} from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x444444);
+const scene = new Scene();
+scene.background = new Color(0x444444);
 
-const camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 1, 100);
+const camera = new PerspectiveCamera(75, innerWidth / innerHeight, 1, 100);
 camera.position.z = 30;
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new WebGLRenderer();
 renderer.setSize(innerWidth, innerHeight);
 
 const orbit = new OrbitControls(camera, renderer.domElement);
 orbit.enableZoom = false;
 
-const grid = new THREE.GridHelper(50, 20, 0x888888);
+const grid = new GridHelper(50, 20, 0x888888);
 grid.position.y = -10;
 
-const group = new THREE.Group();
+const group = new Group();
 
-const geometry = new THREE.BoxGeometry(10, 10, 10);
-const material = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+const geometry = new BoxGeometry(10, 10, 10);
+const material = new MeshPhongMaterial({ color: 0xff0000 });
 
-const wireframe = new THREE.WireframeGeometry(geometry);
+const wireframe = new WireframeGeometry(geometry);
 
-group.add(new THREE.Mesh(geometry, material));
-group.add(new THREE.LineSegments(wireframe));
+group.add(new Mesh(geometry, material));
+group.add(new LineSegments(wireframe));
 
 const lights = [];
 const helpers = [];
 
 for (let i = 0; i < 3; i++) {
-  lights[i] = new THREE.PointLight(0xffffff, 1, 0);
-  helpers[i] = new THREE.PointLightHelper(lights[i], 1);
+  lights[i] = new PointLight(0xffffff, 1, 0);
+  helpers[i] = new PointLightHelper(lights[i], 1);
 }
 
 lights[0].position.set(-20, -20, -20);
