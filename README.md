@@ -19,16 +19,9 @@ This project was made using:
 
 The model used in this project came from [`Sketchlab`](https://sketchfab.com/3d-models/smol-ame-in-an-upcycled-terrarium-hololiveen-490cecc249d242188fda5ad3160a4b24), made by [`seafoam`](https://sketchfab.com/seafoam).
 
-<div align="center">
-  <img width="200" src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/original.png" />
-  
-  **Original Model**
-
-  <img width="200" src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/three-playground.png" />
-  
-  **Model with Shaders**
-
-</div>
+**Original Model** | **Model with Shaders**
+:-----------------:|:----------------------:
+![original model](https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/original.png)|![model with shaders](https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/three-playground.png)
 
 # Setup
 
