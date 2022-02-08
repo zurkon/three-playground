@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { ShaderPass } from "three/examples/jsm/postprocessing/shaderPass";
-import { FilmPass } from "three/examples/jsm/postprocessing/filmPass";
-import { GlitchPass } from "three/examples/jsm/postprocessing/glitchPass";
+import { FilmPass } from "three/examples/jsm/postprocessing/filmPass"
 import { PixelShader } from "three/examples/jsm/shaders/PixelShader";
 import { GammaCorrectionShader } from "three/examples/jsm/shaders/GammaCorrectionShader";
 
@@ -21,13 +20,6 @@ export function filmPass(composer, options = {
   filmPass.name = 'film';
 
   composer.addPass(filmPass);
-}
-
-export function glitchPass(composer) {
-  const glitchPass = new GlitchPass();
-  glitchPass.name = 'glitch';
-
-  composer.addPass(glitchPass);
 }
 
 export function pixelShader(composer, pixelValue) {

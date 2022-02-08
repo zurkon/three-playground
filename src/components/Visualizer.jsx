@@ -4,7 +4,7 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { GUI } from 'dat.gui';
 import { loadModel } from '../lib/model';
-import { filmPass, gammaShader, glitchPass, pixelShader } from '../lib/postprocessing';
+import { filmPass, gammaShader, pixelShader } from '../lib/postprocessing';
 import { loadControls, loadScene } from '../lib/scene';
 
 const Visualizer = () => {
@@ -16,16 +16,12 @@ const Visualizer = () => {
     const gui = new GUI();
     const data = {
       gamma: false,
-      glitch: false,
       film: false,
       pixel: false
     }
     const shaders = {
       gamma: () => {
         gammaShader(composer)
-      },
-      glitch: () => {
-        glitchPass(composer)
       },
       film: () => {
         filmPass(composer, {
@@ -53,7 +49,6 @@ const Visualizer = () => {
       }
     }
     gui.add(data, 'gamma').name("Gamma Correction").onChange(applyPostProcessing);
-    gui.add(data, 'glitch').name("Glitch Shader").onChange(applyPostProcessing);
     gui.add(data, 'film').name("Film Shader").onChange(applyPostProcessing);
     gui.add(data, 'pixel').name("Pixel Shader").onChange(applyPostProcessing);
 
@@ -91,13 +86,6 @@ const Visualizer = () => {
 
       composer.render();
     }
-
-    addEventListener('resize', () => {
-      camera.aspect = innerWidth / innerHeight;
-      camera.updateProjectionMatrix();
-
-      renderer.setSize(innerWidth, innerHeight);
-    });
 
     ref.current.appendChild(renderer.domElement);
 
