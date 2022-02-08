@@ -21,13 +21,17 @@ The model used in this project came from [`Sketchlab`](https://sketchfab.com/3d-
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/original.png">
-  <b>Original Model</b>
+  
+  **Original Model**
+  
 </div>
 
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/three-playground.png">
-  <b>Model with Shaders</b>
+  
+  **>Model with Shaders**
+  
 </div>
 
 # Setup
