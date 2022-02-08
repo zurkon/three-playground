@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/quakesentry/quakesentry.png" />
+  <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/three-playground.png" />
 
 My playground for tests and play with [`Three.js`](https://threejs.org/) and [`React`](https://facebook.github.io/react/).
 
@@ -19,14 +19,14 @@ This project was made using:
 
 The model used in this project came from [`Sketchlab`](https://sketchfab.com/3d-models/smol-ame-in-an-upcycled-terrarium-hololiveen-490cecc249d242188fda5ad3160a4b24), made by [`seafoam`](https://sketchfab.com/seafoam).
 
-<figure>
-  <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/quakesentry/quakesentry.png">
+<figure align="center">
+  <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/original.png">
   <figcaption align="center"><b>Original Model</b></figcaption>
 </figure>
 
 
-<figure>
-  <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/quakesentry/quakesentry.png">
+<figure align="center">
+  <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/three-playground.png">
   <figcaption align="center"><b>Model with Shaders</b></figcaption>
 </figure>
 
