@@ -30,7 +30,7 @@ The model used in this project came from [`Sketchlab`](https://sketchfab.com/3d-
 <div align="center">
   <img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/three-playground/three-playground.png">
   
-  **>Model with Shaders**
+  **Model with Shaders**
   
 </div>
 
